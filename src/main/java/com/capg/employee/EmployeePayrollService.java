@@ -53,4 +53,20 @@ public class EmployeePayrollService {
 		if(ioService.equals(IOService.FILE_IO))
 			new EmployeePayrollFileIOService().printData();
 	}
+	
+	public void readEmployeePayrollData(IOService ioService) {
+		if (ioService.equals(IOService.CONSOLE_IO)) {
+			Scanner consoleInputReader = new Scanner(System.in);
+			System.out.print("Enter Employee ID: ");
+			int id = consoleInputReader.nextInt();
+			System.out.print("Enter Employee Name: ");
+			String name = consoleInputReader.next();
+			System.out.print("Enter Employee Salary: ");
+			double salary = consoleInputReader.nextDouble();
+			consoleInputReader.close();
+			empList.add(new EmployeePayrollData(id, name, salary));
+		} else if (ioService.equals(IOService.FILE_IO)) {
+			new EmployeePayrollFileIOService().readData();
+		}
+	}
 }
