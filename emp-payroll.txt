@@ -1,0 +1,3 @@
+id is: 1 name is: ABC salary is: 100.0
+id is: 2 name is: DEF salary is: 200.0
+id is: 3 name is: GHI salary is: 300.0
