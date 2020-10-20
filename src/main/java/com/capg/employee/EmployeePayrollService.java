@@ -23,7 +23,7 @@ public class EmployeePayrollService {
 		empList.add(new EmployeePayrollData(id, name, salary));
 	}
 
-	private void writeEmployeePayrollData(Scanner consoleInputReader) {
+	private void writeEmployeePayrollData() {
 		System.out.println("\nWriting Employee Payroll Data to Console\n" + empList);
 
 	}
@@ -33,7 +33,7 @@ public class EmployeePayrollService {
 		EmployeePayrollService empService = new EmployeePayrollService(empList);
 		Scanner consoleInputReader = new Scanner(System.in);
 		empService.readEmployeePayrollData(consoleInputReader);
-		empService.writeEmployeePayrollData(consoleInputReader);
+		empService.writeEmployeePayrollData();
 
 	}
 
